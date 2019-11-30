@@ -6,13 +6,17 @@ public class InsertSort {
     }
 
     private void insertSort() {
-        int j;
         for (int i = 1; i < numbers.length; i++) {
             int tmp = numbers[i];
-            for (j = i; j > 0 && numbers[j - 1] > numbers[j]; j--)
-                numbers[j] = numbers[j - 1];
-            numbers[j] = tmp;
+            for (int j = i; j > 0 && numbers[j - 1] > numbers[j]; j--)
+                swap(j, j - 1);
         }
+    }
+
+    private void swap(int i, int j) {
+        int tmp = numbers[i];
+        numbers[i] = numbers[j];
+        numbers[j] = tmp;
     }
 
     public int[] getNumbers() {
@@ -21,8 +25,9 @@ public class InsertSort {
 
     public void showResult() {
         insertSort();
-        for (int i:numbers) {
-            System.out.println(i + "\t");
+        for (int i : numbers) {
+            System.out.print(i + "\t");
         }
     }
+
 }
