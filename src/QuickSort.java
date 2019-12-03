@@ -71,9 +71,10 @@ public class QuickSort {
             System.out.print(i + "\t");
     }
 
+
     public static void main(String[] args) {
-        int[] numbers = {3, 78, 7, 2, 10, 22, 15};
+        int[] numbers = {3, 78, 7,3, 2, 10, 22, 15};
         QuickSort quickSort = new QuickSort(numbers);
-        quickSort.showMidQuickSort();
+        quickSort.showFirstQuickSort();
     }
 }
